@@ -3,11 +3,19 @@
 <yandex-map :settings="settings">
     <!--Markers-->
 </yandex-map>
-    <vue-good-table
-      :columns="columns"
-      :rows="rows"/>
-
+<vue-good-table
+    :columns="columns"
+    :rows="rows"/>
+   <googlemaps-map
+			ref="map"
+			class="map"
+			:center.sync="center"
+			:zoom.sync="zoom"   
+   
+   >
+  </googlemaps-map>     
   </div>
+
 </template>
 
 
@@ -15,6 +23,25 @@
 export default {
   data(){
     return {
+center: {
+				lat: 48.853,
+				lng: 2.298,
+			},
+			path: [
+				{
+					lat: 48.853,
+					lng: 2.298,
+				},
+				{
+					lat: 48.8735,
+					lng: 2.2951,
+				},
+			],
+			options: {
+			},
+			userPosition: null,
+			zoom: 12,
+  
       settings: {
         apiKey: '',
         lang: 'ru_RU',
