@@ -23,7 +23,8 @@
 export default {
   data(){
     return {
-center: {
+      coords: [54, 39],
+      center: {
 				lat: 48.853,
 				lng: 2.298,
 			},
@@ -42,12 +43,7 @@ center: {
 			userPosition: null,
 			zoom: 12,
   
-      settings: {
-        apiKey: '',
-        lang: 'ru_RU',
-        coordorder: 'latlong',
-        version: '2.1'
-      },      
+    
       columns: [
         {
           label: 'Name',
